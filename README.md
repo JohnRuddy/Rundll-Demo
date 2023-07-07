@@ -1,14 +1,14 @@
 #Instructions#
 
-Firstly compile the source file using
+*STEP 1:* Firstly compile the source file using
 
 `csc.exe /platform:anycpu /target:library /unsafe demo.cs`
 
-Disassemble demo.dll and make a demo.il file.
+*STEP 2:* Disassemble demo.dll and make a demo.il file.
 
 `ildasm.exe /out:demo.il demo.dll`
 
-Edit demo.il and find the section === CLASS MEMBERS, look for the Exec method and insert .export [1] to make an entrypoint
+*STEP 3:*  Edit demo.il and find the section === CLASS MEMBERS, look for the Exec method and insert .export [1] to make an entrypoi
 
 ```
 
@@ -120,10 +120,10 @@ Edit demo.il and find the section === CLASS MEMBERS, look for the Exec method an
 ```
 
 
-Recompile it
+*STEP 4:* Recompile it
 
 `ilasm.exe demo.il /DLL /output=demo.dll`
 
-Run the code using, a message displaying hello world should appear in a pop up box.
+*STEP 5:*  Run the code using, a message displaying hello world should appear in a pop up box.
 
 `rundll32 demo.dll Exec`
