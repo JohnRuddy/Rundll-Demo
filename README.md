@@ -1,4 +1,4 @@
-#Instructions#
+*Instructions*
 
 *STEP 1:* Firstly compile the source file using
 
